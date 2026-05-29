@@ -1,9 +1,10 @@
 @import "primeicons/primeicons.css";
 @import "@ng-select/ng-select/themes/default.theme.css"; 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
-body{
-    margin: 0;
-    background-color: lightyellow;
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 .p-dialog{

@@ -1,8 +1,97 @@
-<form [formGroup]="form">
-    <div id="main">
-        <h2 id="header">Sistema de gestión de proyectos</h2>
-        <input pInputText id="nombre" type="text" placeholder="Nombre de usuario" formControlName="nombre" />
-        <p-password id="clave" formControlName="clave" [feedback]="false" autocomplete="off" placeholder="Clave de acceso"/>
-        <p-button label="Iniciar sesión" (click)="iniciarSesion()"/>
+<form class="login-page" [formGroup]="form">
+  <div class="login-shell">
+    <section class="login-hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="pi pi-chart-bar"></i>
+        </div>
+
+        <span class="hero-kicker">Panel de gestión</span>
+
+        <h2>Planificá, organizá y seguí tus proyectos en un solo lugar.</h2>
+
+        <p>
+          Ingresá para administrar clientes, proyectos y tareas con una interfaz
+          más clara y profesional.
+        </p>
+
+        <div class="hero-features">
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="pi pi-check-square"></i>
     </div>
+    <div class="feature-text">
+      <span class="feature-title">Tareas organizadas</span>
+      <span class="feature-label">Gestioná pendientes y avances</span>
+    </div>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">
+      <i class="pi pi-folder-open"></i>
+    </div>
+    <div class="feature-text">
+      <span class="feature-title">Proyectos centralizados</span>
+      <span class="feature-label">Todo en un solo lugar</span>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <section class="login-card">
+      <div class="login-card-inner">
+        <div class="login-logo">
+          <div class="login-logo-circle">
+            <i class="pi pi-chart-line"></i>
+          </div>
+        </div>
+
+        <span class="login-overline">Te damos la Bienvenida</span>
+        <h1>Sistema de Gestión de Proyectos</h1>
+        <p class="login-subtitle">
+          Ingresá con tu usuario para continuar.
+        </p>
+
+        <div class="login-field">
+          <label for="nombre">Usuario</label>
+          <div class="input-shell">
+            <i class="pi pi-user"></i>
+            <input
+              pInputText
+              id="nombre"
+              type="text"
+              placeholder="Nombre de usuario"
+              formControlName="nombre"
+              class="login-input"
+            />
+          </div>
+        </div>
+
+        <div class="login-field">
+          <label for="clave">Clave</label>
+          <p-password
+            id="clave"
+            formControlName="clave"
+            [feedback]="false"
+            [toggleMask]="true"
+            autocomplete="off"
+            placeholder="Clave de acceso"
+            styleClass="login-password"
+            inputStyleClass="login-password-input"
+          />
+        </div>
+
+        <div class="login-actions">
+          <p-button
+            label="Iniciar sesión"
+            icon="pi pi-arrow-right"
+            iconPos="right"
+            (click)="iniciarSesion()"
+            styleClass="login-submit"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
 </form>
